@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <title>Angular 2 Todo App</title>
+    <script src="node_modules/es6-shim/es6-shim.min.js"></script>
+    <script src="node_modules/systemjs/dist/system-polyfills.js"></script>
+
+    <script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    <script src="node_modules/rxjs/bundles/Rx.js"></script>
+    <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
+  </head>
+  <body>
+    <todo-app>Warming up...</todo-app>
+    <script>
+      
+      System.paths = {
+          'angular2/*':'/angular2/*.js',
+          'rtts_assert/*': '/rtts_assert/*.js',
+          'services/*' : '/services/*.js',
+          'todoApp': 'TodoApp.es6'
+      };
+      System.import('todoApp');
+    </script>
+  </body>
+</html>
